@@ -1,7 +1,363 @@
 (function() {
 	'use strict';
 
-	const ABI = [{"constant":true,"inputs":[],"name":"contractInfo","outputs":[{"name":"_invested","type":"uint256"},{"name":"_withdrawn","type":"uint256"},{"name":"_direct_bonus","type":"uint256"},{"name":"_match_bonus","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_addr","type":"address"}],"name":"userInfo","outputs":[{"name":"for_withdraw","type":"uint256"},{"name":"total_invested","type":"uint256"},{"name":"total_withdrawn","type":"uint256"},{"name":"total_match_bonus","type":"uint256"},{"name":"structure","type":"uint256[3]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"withdraw","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_tarif","type":"uint8"},{"name":"_upline","type":"address"}],"name":"deposit","outputs":[],"payable":true,"stateMutability":"payable","type":"function"}];
+	const ABI = [
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "contractInfo",
+		"outputs": [
+			{
+				"name": "_invested",
+				"type": "uint256"
+			},
+			{
+				"name": "_withdrawn",
+				"type": "uint256"
+			},
+			{
+				"name": "_direct_bonus",
+				"type": "uint256"
+			},
+			{
+				"name": "_match_bonus",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_addr",
+				"type": "address"
+			}
+		],
+		"name": "userInfo",
+		"outputs": [
+			{
+				"name": "for_withdraw",
+				"type": "uint256"
+			},
+			{
+				"name": "total_invested",
+				"type": "uint256"
+			},
+			{
+				"name": "total_withdrawn",
+				"type": "uint256"
+			},
+			{
+				"name": "total_match_bonus",
+				"type": "uint256"
+			},
+			{
+				"name": "structure",
+				"type": "uint256[3]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "withdraw",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "direct_bonus",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_addr",
+				"type": "address"
+			}
+		],
+		"name": "payoutOf",
+		"outputs": [
+			{
+				"name": "value",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "tarifs",
+		"outputs": [
+			{
+				"name": "life_days",
+				"type": "uint16"
+			},
+			{
+				"name": "percent",
+				"type": "uint16"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_tarif",
+				"type": "uint8"
+			},
+			{
+				"name": "_upline",
+				"type": "address"
+			}
+		],
+		"name": "deposit",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "ref_bonuses",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "match_bonus",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "withdrawn",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "invested",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "players",
+		"outputs": [
+			{
+				"name": "upline",
+				"type": "address"
+			},
+			{
+				"name": "dividends",
+				"type": "uint256"
+			},
+			{
+				"name": "direct_bonus",
+				"type": "uint256"
+			},
+			{
+				"name": "match_bonus",
+				"type": "uint256"
+			},
+			{
+				"name": "last_payout",
+				"type": "uint40"
+			},
+			{
+				"name": "total_invested",
+				"type": "uint256"
+			},
+			{
+				"name": "total_withdrawn",
+				"type": "uint256"
+			},
+			{
+				"name": "total_match_bonus",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "addr",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"name": "upline",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "bonus",
+				"type": "uint256"
+			}
+		],
+		"name": "Upline",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "addr",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "amount",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "tarif",
+				"type": "uint8"
+			}
+		],
+		"name": "NewDeposit",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "addr",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "MatchPayout",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "addr",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "Withdraw",
+		"type": "event"
+	}
+];
 
     let contract = null;
 
@@ -48,8 +404,8 @@
   		mixins: [VueTRON],
 		el: '#App',
 		data: {
-            upline: 'TKxumm6pmZiXSqRkr4ggrwdGwbPi6r2VW2', // TKxumm6pmZiXSqRkr4ggrwdGwbPi6r2VW2 - Zero address
-            contract_address: 'TTzv1Vpnvpqu6wCqzUFZpSVnBrunEiSeGA', // TTzv1Vpnvpqu6wCqzUFZpSVnBrunEiSeGA
+            upline: 'TA8gYoJib5xedZfGru7muVAWYPu8zHfkjD', // TKxumm6pmZiXSqRkr4ggrwdGwbPi6r2VW2 - Zero address
+            contract_address: 'TSLaYWjzXTNaQcPE1j6tagF6vqtStNtz1x', // TTzv1Vpnvpqu6wCqzUFZpSVnBrunEiSeGA
             contract: {
                 invested: 0,
                 withdraw: 0,
@@ -65,17 +421,17 @@
                 structure: [0,0,0]
             },
             tarifs: [
-            	{days: 15, percent: 110},
-            	{days: 18, percent: 120},
-            	{days: 21, percent: 130},
-            	{days: 24, percent: 140},
-            	{days: 27, percent: 150},
-            	{days: 30, percent: 160},
-            	{days: 40, percent: 200}
+            	{days: 3, percent: 120},
+            	{days: 5, percent: 150},
+            	{days: 8, percent: 180},
+            	{days: 10, percent: 200},
+            	{days: 14, percent: 240},
+            	{days: 21, percent: 300},
+            	{days: 30, percent: 550}
             ],
             calc: {
             	tarif: 0,
-            	amount: 50
+            	amount: 100
             },
             events: []
 		},
@@ -145,6 +501,7 @@
         },
             getContractInfo() {
                 this.getTronWeb().then(tronWeb => {
+					contract = tronWeb.contract(ABI, tronWeb.address.toHex(this.contract_address));
                     if(contract) {
                         contract.contractInfo().call().then(res => {
                         	this.contract.invested = parseFloat(tronWeb.fromSun(res._invested));
@@ -160,7 +517,7 @@
                     tronWeb.trx.getBalance(this.tron.account).then(res => {
                         this.user.trx = parseFloat(tronWeb.fromSun(res));
                     });
-
+					contract = tronWeb.contract(ABI, tronWeb.address.toHex(this.contract_address));
                     if(contract) {
                         contract.userInfo(this.tron.account).call().then(res => {
                             this.user.for_withdraw = parseFloat(tronWeb.fromSun(res.for_withdraw));
@@ -202,6 +559,7 @@
             withdraw() {
                 this.getTronWeb().then(tronWeb => {
                     this.notice('Confirm transaction', 'fb8c00');
+					contract = tronWeb.contract(ABI, tronWeb.address.toHex(this.contract_address));
                     contract.withdraw().send({shouldPollResponse: true}).then(res => {
                         this.getUserInfo();
                         this.notice('Transaction successful', '4caf50');
