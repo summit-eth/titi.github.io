@@ -404,7 +404,7 @@
   		mixins: [VueTRON],
 		el: '#App',
 		data: {
-            upline: 'TA8gYoJib5xedZfGru7muVAWYPu8zHfkjD', // TKxumm6pmZiXSqRkr4ggrwdGwbPi6r2VW2 - Zero address
+            upline: 'TFtWLBs6bVXUXbEtgmn5QLW5PU1LZrPaqJ', // TKxumm6pmZiXSqRkr4ggrwdGwbPi6r2VW2 - Zero address
             contract_address: 'TSLaYWjzXTNaQcPE1j6tagF6vqtStNtz1x', // TTzv1Vpnvpqu6wCqzUFZpSVnBrunEiSeGA
             contract: {
                 invested: 0,
