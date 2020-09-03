@@ -1,0 +1,139 @@
+
+.rewards {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600 !important;
+    padding-left: 5px;
+}
+.dorik-button-cuyrts75-wrapper {
+    padding-top: 4px !important;
+    padding-bottom: 0;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-decoration: none;
+    justify-content: center;
+    border-radius: 5px 5px 5px 5px;
+    border-width: 0;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.24);
+    background-color: #fff;
+    font-size: 18px;
+    color: #333;
+    line-height: 18px;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+.dorik-iconText-akeo9m3f {
+    font-weight: 600 !important;
+}
+.dorik-button-cuyrts75 {
+    padding-top: 4px !important;
+    padding-bottom: 0;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-decoration: none;
+    justify-content: center;
+    border-radius: 5px 5px 5px 5px;
+    border-width: 0;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.24);
+    background-color: #fff;
+    font-size: 18px;
+    color: #333;
+    line-height: 18px;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+.dorik-iconText-akeo9m3f {
+    font-weight: 600 !important;
+}
+::placeholder,
+input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    justify-content: center;
+    border-radius: 5px 5px 5px 5px;
+    border-width: 1px;
+    background-color: #fff;
+    font-size: 18px;
+    color: #333;
+    line-height: 10px;
+    width: 100%;
+    border-style: solid !important;
+    border-color: rgba(0, 0, 0, 0.24) !important;
+}
+#trontravelssupport {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 9999;
+    width: 160px;
+}
+.dorik-text-qviw2yui {
+    line-height: 15px;
+}
+.countup {
+    text-align: center;
+    letter-spacing: -1px;
+    padding: 7px;
+}
+.countup .timeel {
+    display: inline-block;
+    margin: 0;
+    margin-left: -10px;
+}
+.countup span[class*="timeRef"] {
+    margin-left: -10px;
+}
+.goog-te-gadget {
+    white-space: nowrap;
+    letter-spacing: -1px;
+    -webkit-font-smoothing: antialiased;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji" !important;
+}
+.goog-te-gadget-simple .goog-te-menu-value {
+    color: #fff !important;
+}
+.goog-te-gadget-simple {
+    background-color: rgba(16,26,142,.99) !important;
+    border-left: 1px solid rgba(16,26,142,.99) !important;
+    border-top: 1px solid rgba(16,26,142,.99) !important;
+    border-bottom: 1px solid rgba(16,26,142,.99) !important;
+    border-right: 1px solid rgba(16,26,142,.99) !important;
+    padding-top: 10px !important;
+}
+.goog-te-gadget img {
+    border-radius: 50% !important;
+}
+.goog-te-menu-value img {
+    margin-left: 0px !important; 
+    margin-right: 0px !important;
+}
+.goog-te-gadget-simple .goog-te-menu-value span {
+    border-left: 0px solid #ffffff !important; 
+}
+.goog-te-gadget-simple .goog-te-menu-value span {
+    color: #ffffff !important;
+}
+.i-text-red {
+    color: #c62734;
+    font-weight:900;
+}
+.i-text-bold {
+    text-transform: lowercase !important;
+}
+.dorik-text-uontamfg {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 0px 0px 0px 0px;
+    margin-top: 30px;
+    color: #c62734;
+    filter: grayscale(100%) invert(50%);
+}
+
